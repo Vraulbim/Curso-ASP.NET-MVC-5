@@ -16,5 +16,6 @@ namespace DevIO.Bussines.Models.Produtos
 
 
         public Fornecedor Fornecedor { get; set; }
+        public Guid FornecedorId { get; set; }
     }
 }
