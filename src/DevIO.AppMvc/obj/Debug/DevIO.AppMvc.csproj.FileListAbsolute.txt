@@ -130,3 +130,17 @@ C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\s
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\DevIO.Infra.pdb
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\DevIO.Infra.dll.config
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\FluentValidation.xml
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\AutoMapper.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\AutoMapper.xml
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\SimpleInjector.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\SimpleInjector.Integration.Web.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\SimpleInjector.Integration.Web.Mvc.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\SimpleInjector.xml
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\SimpleInjector.Integration.Web.xml
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\SimpleInjector.Integration.Web.Mvc.xml
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\System.Threading.Tasks.Extensions.xml

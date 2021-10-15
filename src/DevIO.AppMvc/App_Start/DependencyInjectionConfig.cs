@@ -1,0 +1,51 @@
+﻿using DevIO.Bussines.Core.Notificacoes;
+using DevIO.Bussines.Models.Fornecedores;
+using DevIO.Bussines.Models.Fornecedores.Services;
+using DevIO.Bussines.Models.Produtos;
+using DevIO.Bussines.Models.Produtos.Services;
+using DevIO.Infra.Data.Context;
+using DevIO.Infra.Data.Repository;
+using SimpleInjector;
+using SimpleInjector.Integration.Web;
+using SimpleInjector.Integration.Web.Mvc;
+using System.Reflection;
+using System.Web.Mvc;
+
+namespace DevIO.AppMvc.App_Start
+{
+    public class DependencyInjectionConfig
+    {
+        public static void RegisterDIContainer()
+        {
+            var container = new Container();
+            container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
+
+            InitializeContainer(container);
+
+            container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
+
+            container.Verify();
+
+            DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
+        }
+
+        private static void InitializeContainer(Container container)
+        {
+            // Lifestyle.Singleton - Uma única instância por aplicação
+
+            // Lifestyle.Transient - Cria uma nova instância para cada injeção
+
+            //Lifestyle.Scoped - Uma única instância por request
+
+            container.Register<DataContext>(Lifestyle.Scoped);
+            container.Register<IProdutoRepository, ProdutoRepository>(Lifestyle.Scoped);
+            container.Register<IProdutoService, ProdutoService>(Lifestyle.Scoped);
+            container.Register<IFornecedorRepository, FornecedorRepository>(Lifestyle.Scoped);
+            container.Register<IEnderecoRepository, EnderecoRepository>(Lifestyle.Scoped);
+            container.Register<IFornecedorService, FornecedorService>(Lifestyle.Scoped);
+            container.Register<INotificador, Notificador>(Lifestyle.Scoped);
+
+            container.RegisterSingleton(() => AutoMapperConfig.GetMapperConfiguration().CreateMapper(container.GetInstance));
+        }
+    }
+}
