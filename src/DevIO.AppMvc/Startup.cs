@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using DevIO.AppMvc.App_Start;
 using Microsoft.Owin;
 using Owin;
 
@@ -18,6 +19,7 @@ namespace DevIO.AppMvc
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            CultureConfig.RegisterCulture();
         }
     }
 }
