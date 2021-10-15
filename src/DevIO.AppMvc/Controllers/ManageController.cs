@@ -45,12 +45,12 @@ namespace DevIO.AppMvc.Controllers
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Sua senha foi alterada."
-                : message == ManageMessageId.SetPasswordSuccess ? "Sua senha foi definida."
-                : message == ManageMessageId.SetTwoFactorSuccess ? "Seu provedor de autenticação de dois fatores foi definido."
-                : message == ManageMessageId.Error ? "Ocorreu um erro."
-                : message == ManageMessageId.AddPhoneSuccess ? "Seu número de telefone foi adicionado."
-                : message == ManageMessageId.RemovePhoneSuccess ? "Seu número de telefone foi removido."
+                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
+                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
+                : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
+                : message == ManageMessageId.Error ? "An error has occurred."
+                : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
+                : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : "";
 
             var userId = User.Identity.GetUserId();
@@ -106,14 +106,14 @@ namespace DevIO.AppMvc.Controllers
             {
                 return View(model);
             }
-            // Gerar o token e enviá-lo
+            // Generate the token and send it
             var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), model.Number);
             if (UserManager.SmsService != null)
             {
                 var message = new IdentityMessage
                 {
                     Destination = model.Number,
-                    Body = "Seu código de segurança é:" + code
+                    Body = "Your security code is: " + code
                 };
                 await UserManager.SmsService.SendAsync(message);
             }
@@ -155,7 +155,7 @@ namespace DevIO.AppMvc.Controllers
         public async Task<ActionResult> VerifyPhoneNumber(string phoneNumber)
         {
             var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), phoneNumber);
-            // Envie um SMS através do provedor de SMS para verificar o número de telefone
+            // Send an SMS through the SMS provider to verify the phone number
             return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
         }
 
@@ -179,8 +179,8 @@ namespace DevIO.AppMvc.Controllers
                 }
                 return RedirectToAction("Index", new { Message = ManageMessageId.AddPhoneSuccess });
             }
-            // Se chegamos até aqui, algo falhou, mostrar formulário novamente
-            ModelState.AddModelError("", "Falha em verificar telefone");
+            // If we got this far, something failed, redisplay form
+            ModelState.AddModelError("", "Failed to verify phone");
             return View(model);
         }
 
@@ -262,7 +262,7 @@ namespace DevIO.AppMvc.Controllers
                 AddErrors(result);
             }
 
-            // Se chegamos até aqui, algo falhou, mostrar formulário novamente
+            // If we got this far, something failed, redisplay form
             return View(model);
         }
 
@@ -271,8 +271,8 @@ namespace DevIO.AppMvc.Controllers
         public async Task<ActionResult> ManageLogins(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.RemoveLoginSuccess ? "O login externo foi removido."
-                : message == ManageMessageId.Error ? "Ocorreu um erro."
+                message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
+                : message == ManageMessageId.Error ? "An error has occurred."
                 : "";
             var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
             if (user == null)
@@ -295,7 +295,7 @@ namespace DevIO.AppMvc.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LinkLogin(string provider)
         {
-            // Solicitar um redirecionamento para o provedor de login externo para vincular um login para o usuário atual
+            // Request a redirect to the external login provider to link a login for the current user
             return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
         }
 
@@ -323,8 +323,8 @@ namespace DevIO.AppMvc.Controllers
             base.Dispose(disposing);
         }
 
-#region Auxiliadores
-        // Usado para proteção XSRF ao adicionar logins externos
+#region Helpers
+        // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
         private IAuthenticationManager AuthenticationManager

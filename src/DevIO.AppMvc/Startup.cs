@@ -1,9 +1,8 @@
-﻿using DevIO.AppMvc.App_Start;
-using Microsoft.Owin;
-using Owin;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Microsoft.Owin;
+using Owin;
 
 [assembly: OwinStartupAttribute(typeof(DevIO.AppMvc.Startup))]
 namespace DevIO.AppMvc

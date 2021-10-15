@@ -1,17 +1,17 @@
-﻿using DevIO.Bussines.Core.Notificacoes;
-using DevIO.Bussines.Models.Fornecedores;
-using DevIO.Bussines.Models.Fornecedores.Services;
-using DevIO.Bussines.Models.Produtos;
-using DevIO.Bussines.Models.Produtos.Services;
+﻿using System.Reflection;
+using System.Web.Mvc;
+using DevIO.Business.Core.Notificacoes;
+using DevIO.Business.Models.Fornecedores;
+using DevIO.Business.Models.Fornecedores.Services;
+using DevIO.Business.Models.Produtos;
+using DevIO.Business.Models.Produtos.Services;
 using DevIO.Infra.Data.Context;
 using DevIO.Infra.Data.Repository;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
-using System.Reflection;
-using System.Web.Mvc;
 
-namespace DevIO.AppMvc.App_Start
+namespace DevIO.AppMvc
 {
     public class DependencyInjectionConfig
     {
@@ -31,13 +31,16 @@ namespace DevIO.AppMvc.App_Start
 
         private static void InitializeContainer(Container container)
         {
-            // Lifestyle.Singleton - Uma única instância por aplicação
+            // Lifestyle.Singleton
+            // Uma única instância por aplicação
 
-            // Lifestyle.Transient - Cria uma nova instância para cada injeção
+            // Lifestyle.Transient
+            // Cria uma nova instância para cada injeção
 
-            //Lifestyle.Scoped - Uma única instância por request
+            //Lifestyle.Scoped
+            // Uma única instância por request
 
-            container.Register<DataContext>(Lifestyle.Scoped);
+            container.Register<MeuDbContext>(Lifestyle.Scoped);
             container.Register<IProdutoRepository, ProdutoRepository>(Lifestyle.Scoped);
             container.Register<IProdutoService, ProdutoService>(Lifestyle.Scoped);
             container.Register<IFornecedorRepository, FornecedorRepository>(Lifestyle.Scoped);

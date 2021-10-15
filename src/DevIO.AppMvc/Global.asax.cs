@@ -1,7 +1,4 @@
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Optimization;
-using System.Web.Routing;
+﻿using System.Web;
 
 namespace DevIO.AppMvc
 {
@@ -9,6 +6,7 @@ namespace DevIO.AppMvc
     {
         protected void Application_Start()
         {
+            
         }
     }
 }

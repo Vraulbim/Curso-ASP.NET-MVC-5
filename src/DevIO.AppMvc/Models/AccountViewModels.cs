@@ -29,11 +29,11 @@ namespace DevIO.AppMvc.Models
         public string Provider { get; set; }
 
         [Required]
-        [Display(Name = "Código")]
+        [Display(Name = "Code")]
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Lembrar deste navegador?")]
+        [Display(Name = "Remember this browser?")]
         public bool RememberBrowser { get; set; }
 
         public bool RememberMe { get; set; }
@@ -55,10 +55,10 @@ namespace DevIO.AppMvc.Models
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Senha")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Display(Name = "Lembrar-me?")]
+        [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
 
@@ -70,14 +70,14 @@ namespace DevIO.AppMvc.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "O/A {0} deve ter no mínimo {2} caracteres.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Senha")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirmar Senha")]
-        [Compare("Password", ErrorMessage = "A senha e a senha de confirmação não correspondem.")]
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -89,14 +89,14 @@ namespace DevIO.AppMvc.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "O/A {0} deve ter no mínimo {2} caracteres.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Senha")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirmar senha")]
-        [Compare("Password", ErrorMessage = "A senha e a senha de confirmação não coincidem.")]
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }
@@ -106,7 +106,7 @@ namespace DevIO.AppMvc.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "E-mail")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
     }
 }

@@ -1,24 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using DevIO.AppMvc.ViewModels;
-using DevIO.Bussines.Models.Produtos;
-using DevIO.Bussines.Models.Produtos.Services;
 using AutoMapper;
-using System.Collections.Generic;
+using DevIO.AppMvc.ViewModels;
+using DevIO.Business.Models.Produtos;
+using DevIO.Business.Models.Produtos.Services;
 
 namespace DevIO.AppMvc.Controllers
 {
-    public class ProdutosController : Controller
+    public class ProdutosController : BaseController
     {
-        private readonly IProdutoRepository _repository;
-        private readonly IProdutoService _service;
+        private readonly IProdutoRepository _produtoRepository;
+        private readonly IProdutoService _produtoService;
         private readonly IMapper _mapper;
 
-        public ProdutosController(IProdutoRepository repository, IProdutoService service, IMapper mapper)
+        public ProdutosController(IProdutoRepository produtoRepository, 
+                                  IProdutoService produtoService, 
+                                  IMapper mapper)
         {
-            _repository = repository;
-            _service = service;
+            _produtoRepository = produtoRepository;
+            _produtoService = produtoService;
             _mapper = mapper;
         }
 
@@ -26,7 +28,7 @@ namespace DevIO.AppMvc.Controllers
         [HttpGet]
         public async Task<ActionResult> Index()
         {
-            return View(_mapper.Map<IEnumerable<ProdutoViewModel>>(await _repository.ObterTodos()));
+            return View(_mapper.Map<IEnumerable<ProdutoViewModel>>(await _produtoRepository.ObterTodos()));
         }
 
         [Route("dados-do-produto/{id:guid}")]
@@ -35,11 +37,11 @@ namespace DevIO.AppMvc.Controllers
         {
             var produtoViewModel = await ObterProduto(id);
 
-
             if (produtoViewModel == null)
             {
                 return HttpNotFound();
             }
+
             return View(produtoViewModel);
         }
 
@@ -57,8 +59,8 @@ namespace DevIO.AppMvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _service.Adicionar(_mapper.Map<Produto>(produtoViewModel));
-                
+                await _produtoService.Adicionar(_mapper.Map<Produto>(produtoViewModel));
+
                 return RedirectToAction("Index");
             }
 
@@ -70,11 +72,12 @@ namespace DevIO.AppMvc.Controllers
         public async Task<ActionResult> Edit(Guid id)
         {
             var produtoViewModel = await ObterProduto(id);
-            
+
             if (produtoViewModel == null)
             {
                 return HttpNotFound();
             }
+
             return View(produtoViewModel);
         }
 
@@ -85,22 +88,26 @@ namespace DevIO.AppMvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _service.Atualizar(_mapper.Map<Produto>(produtoViewModel));
+                await _produtoService.Atualizar(_mapper.Map<Produto>(produtoViewModel));
+
                 return RedirectToAction("Index");
             }
+
             return View(produtoViewModel);
         }
+
 
         [Route("excluir-produto/{id:guid}")]
         [HttpGet]
         public async Task<ActionResult> Delete(Guid id)
         {
-
             var produtoViewModel = await ObterProduto(id);
+
             if (produtoViewModel == null)
             {
                 return HttpNotFound();
             }
+
             return View(produtoViewModel);
         }
 
@@ -116,13 +123,14 @@ namespace DevIO.AppMvc.Controllers
                 return HttpNotFound();
             }
 
-            await _service.Remover(id);
+            await _produtoService.Remover(id);
+
             return RedirectToAction("Index");
         }
 
         private async Task<ProdutoViewModel> ObterProduto(Guid id)
         {
-            var produto = _mapper.Map<ProdutoViewModel>(await _repository.ObterProdutoPorFornecedor(id));
+            var produto = _mapper.Map<ProdutoViewModel>(await _produtoRepository.ObterProdutoFornecedor(id));
             return produto;
         }
 
@@ -130,9 +138,10 @@ namespace DevIO.AppMvc.Controllers
         {
             if (disposing)
             {
-                _repository.Dispose();
-                _service.Dispose();
+                _produtoRepository.Dispose();
+                _produtoService.Dispose();
             }
+
             base.Dispose(disposing);
         }
     }

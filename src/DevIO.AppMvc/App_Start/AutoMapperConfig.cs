@@ -1,12 +1,12 @@
-﻿using AutoMapper;
-using DevIO.AppMvc.ViewModels;
-using DevIO.Bussines.Models.Fornecedores;
-using DevIO.Bussines.Models.Produtos;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
+using AutoMapper;
+using DevIO.AppMvc.ViewModels;
+using DevIO.Business.Models.Fornecedores;
+using DevIO.Business.Models.Produtos;
 
-namespace DevIO.AppMvc.App_Start
+namespace DevIO.AppMvc
 {
     public class AutoMapperConfig
     {

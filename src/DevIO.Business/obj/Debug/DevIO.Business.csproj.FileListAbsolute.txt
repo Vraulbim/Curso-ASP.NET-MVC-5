@@ -1,0 +1,9 @@
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Business\bin\Debug\DevIO.Business.dll
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Business\bin\Debug\DevIO.Business.pdb
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Business\bin\Debug\FluentValidation.dll
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Business\bin\Debug\FluentValidation.xml
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Business\obj\Debug\DevIO.Business.csproj.AssemblyReference.cache
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Business\obj\Debug\DevIO.Business.csproj.CoreCompileInputs.cache
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Business\obj\Debug\DevIO.Business.csproj.CopyComplete
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Business\obj\Debug\DevIO.Business.dll
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Business\obj\Debug\DevIO.Business.pdb

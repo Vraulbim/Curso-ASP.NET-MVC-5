@@ -1,35 +1,34 @@
-﻿using DevIO.Bussines.Models.Produtos;
-using System;
-using System.Data.Entity;
+﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
+using DevIO.Business.Models.Produtos;
 using DevIO.Infra.Data.Context;
 
 namespace DevIO.Infra.Data.Repository
 {
     public class ProdutoRepository : Repository<Produto>, IProdutoRepository
     {
-        public ProdutoRepository(DataContext contex) : base(contex)
-        {
+        public ProdutoRepository(MeuDbContext context) : base(context) { }
 
+        public async Task<Produto> ObterProdutoFornecedor(Guid id)
+        {
+            return await Db.Produtos.AsNoTracking()
+                .Include(f => f.Fornecedor)
+                .FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<Produto> ObterProdutoPorFornecedor(Guid id)
+        public async Task<IEnumerable<Produto>> ObterProdutosFornecedores()
         {
-            return await context.Produtos.AsNoTracking()
-                .Include(f => f.Fornecedor).FirstOrDefaultAsync(p => p.Id == id);
+            return await Db.Produtos.AsNoTracking()
+                .Include(f => f.Fornecedor)
+                .OrderBy(p => p.Nome).ToListAsync();
         }
 
-        public async Task<IEnumerable<Produto>> ObterProdutosDeFornecedores()
+        public async Task<IEnumerable<Produto>> ObterProdutosPorFornecedor(Guid fornecedorId)
         {
-            return await context.Produtos.AsNoTracking()
-                .Include(p => p.Fornecedor).OrderBy(p => p.Nome).ToListAsync();
-        }
-
-        public async Task<IEnumerable<Produto>> ObterProdutosPorFornecedor(Guid id)
-        {
-            return await Buscar(p => p.FornecedorId == id);
+            return await Buscar(p => p.FornecedorId == fornecedorId);
         }
     }
 }

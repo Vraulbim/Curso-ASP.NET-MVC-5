@@ -1,16 +1,16 @@
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\DevIO.Infra.dll.config
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\DevIO.Infra.dll
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\DevIO.Infra.pdb
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\DevIO.Bussines.dll
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\EntityFramework.dll
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\DevIO.Bussines.pdb
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\EntityFramework.xml
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.AssemblyReference.cache
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.CoreCompileInputs.cache
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.CopyComplete
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\obj\Debug\DevIO.Infra.dll
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\obj\Debug\DevIO.Infra.pdb
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\FluentValidation.dll
-C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\bin\Debug\FluentValidation.xml
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\DevIO.Infra.dll.config
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\DevIO.Infra.dll
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\DevIO.Infra.pdb
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\DevIO.Business.dll
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\EntityFramework.dll
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\FluentValidation.dll
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\DevIO.Business.pdb
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\EntityFramework.xml
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\bin\Debug\FluentValidation.xml
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.AssemblyReference.cache
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.CopyComplete
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\obj\Debug\DevIO.Infra.dll
+C:\Users\Desenvolvimento\Desktop\Implementação\src\DevIO.Infra\obj\Debug\DevIO.Infra.pdb
