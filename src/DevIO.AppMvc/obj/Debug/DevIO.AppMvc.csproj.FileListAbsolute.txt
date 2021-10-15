@@ -123,3 +123,10 @@ C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\s
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\obj\Debug\DevIO.AppMvc.csproj.CopyComplete
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\obj\Debug\DevIO.AppMvc.dll
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\obj\Debug\DevIO.AppMvc.pdb
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\DevIO.Bussines.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\DevIO.Infra.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\FluentValidation.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\DevIO.Bussines.pdb
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\DevIO.Infra.pdb
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\DevIO.Infra.dll.config
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.AppMvc\bin\FluentValidation.xml

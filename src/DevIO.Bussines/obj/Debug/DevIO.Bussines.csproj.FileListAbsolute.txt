@@ -4,3 +4,6 @@ C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\s
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Bussines\obj\Debug\DevIO.Bussines.csproj.CoreCompileInputs.cache
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Bussines\obj\Debug\DevIO.Bussines.dll
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Bussines\obj\Debug\DevIO.Bussines.pdb
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Bussines\bin\Debug\FluentValidation.dll
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Bussines\bin\Debug\FluentValidation.xml
+C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Bussines\obj\Debug\DevIO.Bussines.csproj.CopyComplete
