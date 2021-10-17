@@ -30,3 +30,19 @@ C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\s
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.CopyComplete
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\obj\Debug\DevIO.Infra.dll
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Infra\obj\Debug\DevIO.Infra.pdb
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\DevIO.Infra.dll.config
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\DevIO.Infra.dll
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\DevIO.Infra.pdb
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\DevIO.Business.dll
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\EntityFramework.dll
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\FluentValidation.dll
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\DevIO.Business.pdb
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\EntityFramework.xml
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\bin\Debug\FluentValidation.xml
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.AssemblyReference.cache
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.CoreCompileInputs.cache
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\obj\Debug\DevIO.Infra.csproj.CopyComplete
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\obj\Debug\DevIO.Infra.dll
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Infra\obj\Debug\DevIO.Infra.pdb

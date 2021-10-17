@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using DevIO.AppMvc.Extensions;
 using DevIO.AppMvc.ViewModels;
+using DevIO.Business.Core.Notificacoes;
 using DevIO.Business.Models.Fornecedores;
 using DevIO.Business.Models.Fornecedores.Services;
 using System;
@@ -9,6 +11,7 @@ using System.Web.Mvc;
 
 namespace DevIO.AppMvc.Controllers
 {
+    [Authorize]
     public class FornecedoresController : BaseController
     {
         private readonly IFornecedorRepository _fornecedorRepository;
@@ -17,13 +20,15 @@ namespace DevIO.AppMvc.Controllers
 
         public FornecedoresController(IFornecedorRepository fornecedorRepository,
                                       IMapper mapper,
-                                      IFornecedorService fornecedorService)
+                                      IFornecedorService fornecedorService,
+                                      INotificador notificador) : base(notificador)
         {
             _fornecedorRepository = fornecedorRepository;
             _mapper = mapper;
             _fornecedorService = fornecedorService;
         }
 
+        [AllowAnonymous]
         [Route("lista-de-fornecedores")]
         public async Task<ActionResult> Index()
         {
@@ -43,12 +48,14 @@ namespace DevIO.AppMvc.Controllers
             return View(fornecedorViewModel);
         }
 
+        [ClaimsAuthorize("Fornecedor", "Adicionar")]
         [Route("novo-fornecedor")]
         public ActionResult Create()
         {
             return View();
         }
 
+        [ClaimsAuthorize("Fornecedor", "Adicionar")]
         [Route("novo-fornecedor")]
         [HttpPost]
         public async Task<ActionResult> Create(FornecedorViewModel fornecedorViewModel)
@@ -58,13 +65,12 @@ namespace DevIO.AppMvc.Controllers
             var fornecedor = _mapper.Map<Fornecedor>(fornecedorViewModel);
             await _fornecedorService.Adicionar(fornecedor);
 
-            // TODO:
-            // E se nao der certo?
+            if (!OperacaoValida()) return View(fornecedorViewModel);
 
             return RedirectToAction("Index");
         }
 
-
+        [ClaimsAuthorize("Fornecedor", "Editar")]
         [Route("editar-fornecedor/{id:guid}")]
         public async Task<ActionResult> Edit(Guid id)
         {
@@ -78,6 +84,7 @@ namespace DevIO.AppMvc.Controllers
             return View(fornecedorViewModel);
         }
 
+        [ClaimsAuthorize("Fornecedor", "Editar")]
         [Route("editar-fornecedor/{id:guid}")]
         [HttpPost]
         public async Task<ActionResult> Edit(Guid id, FornecedorViewModel fornecedorViewModel)
@@ -95,6 +102,7 @@ namespace DevIO.AppMvc.Controllers
             return RedirectToAction("Index");
         }
 
+        [ClaimsAuthorize("Fornecedor", "Excluir")]
         [Route("excluir-fornecedor/{id:guid}")]
         public async Task<ActionResult> Delete(Guid id)
         {
@@ -108,6 +116,7 @@ namespace DevIO.AppMvc.Controllers
             return View(fornecedorViewModel);
         }
 
+        [ClaimsAuthorize("Fornecedor", "Excluir")]
         [Route("excluir-fornecedor/{id:guid}")]
         [HttpPost, ActionName("Delete")]
         public async Task<ActionResult> DeleteConfirmed(Guid id)

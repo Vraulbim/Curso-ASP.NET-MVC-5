@@ -16,3 +16,12 @@ C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\s
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Business\obj\Debug\DevIO.Business.csproj.CopyComplete
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Business\obj\Debug\DevIO.Business.dll
 C:\Users\Desenvolvimento\Documents\Cursos Ponto.Sys\AST.NET MVC 5\MeusProdutos\src\DevIO.Business\obj\Debug\DevIO.Business.pdb
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Business\bin\Debug\DevIO.Business.dll
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Business\bin\Debug\DevIO.Business.pdb
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Business\bin\Debug\FluentValidation.dll
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Business\bin\Debug\FluentValidation.xml
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Business\obj\Debug\DevIO.Business.csproj.AssemblyReference.cache
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Business\obj\Debug\DevIO.Business.csproj.CoreCompileInputs.cache
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Business\obj\Debug\DevIO.Business.csproj.CopyComplete
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Business\obj\Debug\DevIO.Business.dll
+E:\Ponto.Sys - Cursos\Curso-ASP.NET-MVC-5\src\DevIO.Business\obj\Debug\DevIO.Business.pdb
