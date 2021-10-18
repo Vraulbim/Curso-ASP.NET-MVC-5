@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
+using DevIO.AppMvc.Extensions;
 using DevIO.AppMvc.ViewModels;
 using DevIO.Business.Core.Notificacoes;
 using DevIO.Business.Models.Fornecedores;
@@ -13,6 +14,7 @@ using DevIO.Business.Models.Produtos.Services;
 
 namespace DevIO.AppMvc.Controllers
 {
+    [Authorize]
     public class ProdutosController : BaseController
     {
         private readonly IProdutoRepository _produtoRepository;
@@ -32,6 +34,7 @@ namespace DevIO.AppMvc.Controllers
             _mapper = mapper;
         }
 
+        [AllowAnonymous]
         [Route("lista-de-produtos")]
         [HttpGet]
         public async Task<ActionResult> Index()
@@ -39,6 +42,7 @@ namespace DevIO.AppMvc.Controllers
             return View(_mapper.Map<IEnumerable<ProdutoViewModel>>(await _produtoRepository.ObterProdutosFornecedores()));
         }
 
+        [AllowAnonymous]
         [Route("dados-do-produto/{id:guid}")]
         [HttpGet]
         public async Task<ActionResult> Details(Guid id)
@@ -53,6 +57,7 @@ namespace DevIO.AppMvc.Controllers
             return View(produtoViewModel);
         }
 
+        [ClaimsAuthorize("Produto", "Adicionar")]
         [Route("novo-produto")]
         [HttpGet]
         public async Task<ActionResult> Create()
@@ -62,6 +67,7 @@ namespace DevIO.AppMvc.Controllers
             return View(produtoViewModel);
         }
 
+        [ClaimsAuthorize("Produto", "Adicionar")]
         [Route("novo-produto")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -79,11 +85,12 @@ namespace DevIO.AppMvc.Controllers
             produtoViewModel.Imagem = imgPrefixo + produtoViewModel.ImagemUpload.FileName;
             await _produtoService.Adicionar(_mapper.Map<Produto>(produtoViewModel));
 
-            //if (!OperacaoValida()) return View(produtoViewModel);
+            if (!OperacaoValida()) return View(produtoViewModel);
 
             return RedirectToAction("Index");
         }
 
+        [ClaimsAuthorize("Produto", "Editar")]
         [Route("editar-produto/{id:guid}")]
         [HttpGet]
         public async Task<ActionResult> Edit(Guid id)
@@ -98,6 +105,7 @@ namespace DevIO.AppMvc.Controllers
             return View(produtoViewModel);
         }
 
+        [ClaimsAuthorize("Produto", "Editar")]
         [Route("editar-produto/{id:guid}")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -128,11 +136,12 @@ namespace DevIO.AppMvc.Controllers
 
             await _produtoService.Atualizar(_mapper.Map<Produto>(produtoAtualizacao));
 
-            //if (!OperacaoValida()) return View(produtoViewModel);
+            if (!OperacaoValida()) return View(produtoViewModel);
 
             return RedirectToAction("Index");
         }
 
+        [ClaimsAuthorize("Produto", "Excluir")]
         [Route("excluir-produto/{id:guid}")]
         [HttpGet]
         public async Task<ActionResult> Delete(Guid id)
@@ -147,6 +156,7 @@ namespace DevIO.AppMvc.Controllers
             return View(produtoViewModel);
         }
 
+        [ClaimsAuthorize("Produto", "Excluir")]
         [Route("excluir-produto/{id:guid}")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

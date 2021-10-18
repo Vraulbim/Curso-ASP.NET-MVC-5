@@ -35,6 +35,7 @@ namespace DevIO.AppMvc.Controllers
             return View(_mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos()));
         }
 
+        [AllowAnonymous]
         [Route("dados-do-fornecedor/{id:guid}")]
         public async Task<ActionResult> Details(Guid id)
         {
@@ -133,6 +134,7 @@ namespace DevIO.AppMvc.Controllers
             return RedirectToAction("Index");
         }
 
+        [AllowAnonymous]
         [Route("obter-endereco-fornecedor/{id:guid}")]
         public async Task<ActionResult> ObterEndereco(Guid id)
         {
@@ -146,6 +148,7 @@ namespace DevIO.AppMvc.Controllers
             return PartialView("_DetalhesEndereco", fornecedor);
         }
 
+        [ClaimsAuthorize("Fornecedor", "Editar")]
         [Route("atualizar-endereco-fornecedor/{id:guid}")]
         [HttpGet]
         public async Task<ActionResult> AtualizarEndereco(Guid id)
@@ -160,6 +163,7 @@ namespace DevIO.AppMvc.Controllers
             return PartialView("_AtualizarEndereco", new FornecedorViewModel { Endereco = fornecedor.Endereco });
         }
 
+        [ClaimsAuthorize("Fornecedor", "Editar")]
         [Route("atualizar-endereco-fornecedor/{id:guid}")]
         [HttpPost]
         public async Task<ActionResult> AtualizarEndereco(FornecedorViewModel fornecedorViewModel)
@@ -171,12 +175,12 @@ namespace DevIO.AppMvc.Controllers
 
             await _fornecedorService.AtualizarEndereco(_mapper.Map<Endereco>(fornecedorViewModel.Endereco));
 
-            //TODO:
-            // E se não der certo?
+            if (!OperacaoValida()) return PartialView("_AtualizarEndereco", fornecedorViewModel);
 
             var url = Url.Action("ObterEndereco", "Fornecedores", new { id = fornecedorViewModel.Endereco.FornecedorId });
             return Json(new { success = true, url });
         }
+
 
         private async Task<FornecedorViewModel> ObterFornecedorEndereco(Guid id)
         {
